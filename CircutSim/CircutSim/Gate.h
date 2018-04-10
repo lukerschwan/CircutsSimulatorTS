@@ -9,6 +9,7 @@ using namespace std;
 #define NOT = 5555;
 #define XOR = 6666;
 #define XNOR =7777;
+class Wire;
 class Gate {
 	/*
 In1

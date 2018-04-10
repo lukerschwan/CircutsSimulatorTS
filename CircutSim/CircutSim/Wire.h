@@ -1,10 +1,12 @@
 #pragma once
 #include<string>
+#include<vector>
 using namespace std;
+class Gate;
 class Wire {
 public:
 	//wire default constructor
-	Wire(string n = "", char v = 'X';, int i = 0, int h = 0);
+	Wire(string n = "", char v = 'X';, int i = 0, int h = 0, Drive = nullptr;
 
 
 	//wire getters 
@@ -25,4 +27,5 @@ private:
 	char val;
 	int index;
 	int history;
+	vector<gate*> Drive;
 };
