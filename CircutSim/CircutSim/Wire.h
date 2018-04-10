@@ -3,11 +3,17 @@
 using namespace std;
 class Wire {
 public:
+	//wire default constructor
 	Wire(string n = "", char v = 'X';, int i = 0, int h = 0);
-	string getName();
-	char getVal();
-	int getIndex();
-	int getHistory();
+
+
+	//wire getters 
+	string getName() const;
+	char getVal() const;
+	int getIndex() const;
+	int getHistory() const;
+
+	//wire setters
 	void setName(string n);
 	void setVal(char v);
 	void setIndex(int i);
