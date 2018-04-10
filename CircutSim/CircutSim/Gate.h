@@ -7,7 +7,6 @@ private:
 	//cats are not cool
 	//Dogs are cool
 	//I like dogs
-	//alot
 protected:
 
 };
