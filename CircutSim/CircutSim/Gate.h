@@ -21,6 +21,12 @@ public:
 	//default constructor
 	Gate(Wire* in1 =nullptr, Wire* in2 = nullptr, Wire* out, int type = 0, int delay = 0);
 
+
+	//TODO write the get gate result function
+	// gateEvent getGateResult(Wire*in1, Wire *in2, , int type, int delay);
+
+
+
 	//consted getters
 	Wire * getIn1() const;
 	Wire * getIn2() const;
@@ -37,7 +43,7 @@ public:
 
 
 protected:
-
+	
 
 private:
 	//pointer to wire inputs
