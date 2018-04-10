@@ -1,6 +1,7 @@
 #pragma once
 #include "Wire.h"
 #include <string>
+using namespace std;
 #define AND =1111;
 #define OR = 2222;
 #define NOT = 3333;
@@ -18,7 +19,7 @@ Delay
 	*/
 public:
 	//default constructor
-	Gate()
+	Gate(Wire* in1 =nullptr, Wire* in2 = nullptr, Wire* out, int type = 0, int delay = 0);
 
 	//consted getters
 	Wire * getIn1() const;
