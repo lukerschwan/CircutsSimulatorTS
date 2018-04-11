@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include "Wire.h"
 #include <string>
 using namespace std;
@@ -12,7 +13,7 @@ using namespace std;
 class Wire; //foreward declaration
 class Gate {
 	/*
-In1
+In1 
 Int2
 Out
 Type

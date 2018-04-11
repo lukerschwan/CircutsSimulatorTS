@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include<string>
 #include<vector>
 using namespace std;
@@ -6,7 +7,7 @@ class Gate; //foreward declaration
 class Wire {
 public:
 	//wire default constructor
-	Wire(string n = "", char v = 'X';, int i = 0, int h = 0, Gate* d = nullptr);
+	Wire(string n = "", char v = 'X';, int i = 0, int h = 0, Gate * d = nullptr);
 
 
 	//wire getters 
