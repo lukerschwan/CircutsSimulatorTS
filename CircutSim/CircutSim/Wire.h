@@ -30,5 +30,5 @@ private:
 	char val;
 	int index;
 	int history;
-	vector<gate*> Drive;
+	vector<Gate*> Drive;
 };
