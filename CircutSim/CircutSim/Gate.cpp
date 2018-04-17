@@ -1,50 +1,36 @@
 #include "Gate.h"
 
-Gate::Gate(Wire * in1, Wire * in2, Wire * out, int type, int delay)
+Gate::Gate(Wire * in1New, Wire * in2New, Wire * outNew, int typeNew, int delayNew)
 {
+	in1 = in1New;
+	in2 = in2New;
+	outWire = outNew;
+	type = typeNew;
+	delay = delayNew;
 }
 
 Wire * Gate::getIn1() const
 {
-	return nullptr;
+	return in1;
 }
 
 Wire * Gate::getIn2() const
 {
-	return nullptr;
+	return in2;
 }
 
 Wire * Gate::getOutWire() const
 {
-	return nullptr;
+	return outWire;
 }
 
-int Gate::getType() const
+string Gate::getType() const
 {
-	return 0;
+	return type;
 }
 
 int Gate::getDelay() const
 {
-	return 0;
+	return delay;
 }
 
-void Gate::setIn1(Wire * inPtr)
-{
-}
-
-void Gate::setIn2(Wire * inPtr)
-{
-}
-
-void Gate::setoutWire(Wire * inPtr)
-{
-}
-
-void Gate::setType(int inType)
-{
-}
-
-void Gate::setDelay(int inDelay)
-{
-}
