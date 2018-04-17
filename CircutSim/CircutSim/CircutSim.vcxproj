@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Event.h" />
     <ClInclude Include="Gate.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
