@@ -7,7 +7,7 @@ class Gate; //foreward declaration
 class Wire {
 public:
 	//wire default constructor
-	Wire(string n = "", char v = 'X';, int i = 0, int h = 0, Gate * d = nullptr);
+	Wire(string n = "", char v = 'X', int i = 0, int h = 0, Gate * d = nullptr);
 
 
 	//wire getters 
@@ -15,7 +15,7 @@ public:
 	char getVal() const;
 	int getIndex() const;
 	int getHistory() const;
-	Gate *getDrive(int gateIndex) const;
+	vector<Gate*> getDrive(int gateIndex) const;
 
 
 
@@ -30,5 +30,5 @@ private:
 	char val;
 	int index;
 	int history;
-	vector<Gate*> Drive;
+	vector<Gate*> drive;
 };
