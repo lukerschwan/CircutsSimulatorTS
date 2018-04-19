@@ -4,19 +4,19 @@ using namespace std;
 class Event{
 	//added event class
 public:
-	Event(Wire &w, int t, int v, int c);
-	void setEventWire(Wire &w);
+	Event(Wire *w, int t, int v, int c);
+	void setEventWire(Wire *w);
 	void setTime(int t);
 	void setVal(int v);
 	void setCreationCnt(int c);
-	Wire *getEventWire() const;
+	Wire *getEventWire(int index) const;
 	int getTime() const;
 	int getVal() const;
 	int getCreationCnt() const;
 
 private:
 
-	Wire * eventWire;
+	vector<Wire *> eventWire;
 	int time;
 	int val;
 	int creationCnt;

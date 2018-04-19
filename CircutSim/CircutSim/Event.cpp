@@ -1,16 +1,16 @@
 #include "Event.h"
 
-Event::Event(Wire & w, int t, int v, int c)
+Event::Event(Wire * w = nullptr, int t = 0, int v = 0, int c = 0)
 {
-	eventWire = &w;
+	eventWire.push_back(w);
 	time = t;
 	val = v;
 	creationCnt = c;
 }
 
-void Event::setEventWire(Wire & w)
+void Event::setEventWire(Wire *w)
 {
-	eventWire = &w;
+	eventWire.push_back(w);
 }
 
 void Event::setTime(int t)
@@ -28,9 +28,9 @@ void Event::setCreationCnt(int c)
 	creationCnt = c;
 }
 
-Wire * Event::getEventWire() const
+Wire * Event::getEventWire(int index) const
 {
-	return eventWire;
+	return eventWire.at(index);
 }
 
 int Event::getTime() const
