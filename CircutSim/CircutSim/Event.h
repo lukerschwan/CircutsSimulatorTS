@@ -4,7 +4,7 @@ using namespace std;
 class Event{
 	//added event class
 public:
-	Event(Wire *w, int t, int v, int c);
+	Event(Wire *w = nullptr, int t = 0, int v = 0, int c = 0);
 	void setEventWire(Wire *w);
 	void setTime(int t);
 	void setVal(int v);
