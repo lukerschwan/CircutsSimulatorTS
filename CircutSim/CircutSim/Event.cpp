@@ -1,6 +1,6 @@
 #include "Event.h"
 
-Event::Event(Wire * w = nullptr, int t = 0, int v = 0, int c = 0)
+Event::Event(Wire * w, int t, int v, int c)
 {
 	eventWire.push_back(w);
 	time = t;
