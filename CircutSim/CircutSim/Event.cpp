@@ -48,3 +48,8 @@ int Event::getCreationCnt() const
 {
 	return creationCnt;
 }
+
+bool Event::operator<(const Event & e1) const
+{
+	return time < e1.time;
+}
