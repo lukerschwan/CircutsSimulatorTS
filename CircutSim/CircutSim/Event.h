@@ -14,7 +14,8 @@ public:
 	int getVal() const;
 	int getCreationCnt() const;
 	bool operator ==(const Event& e1)const;
-	bool operator<(const Event& e1)const;
+	bool operator<(const Event& e1)const; //Reversed because greater parameter does not work for the priority queue
+	bool operator>(const Event& e1)const;
 
 private:
 
