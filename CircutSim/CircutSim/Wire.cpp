@@ -1,4 +1,7 @@
 #include "Wire.h"
+#include "stdafx.h"
+
+
 
 string Wire::getName() const
 {
@@ -27,5 +30,5 @@ vector<Gate*> Wire::getDrive(int gateIndex) const
 
 void Wire::setDrive(Gate * d)
 {
-	drive.insert(d);
+	//drive.insert(d);
 }

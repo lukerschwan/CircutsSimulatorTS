@@ -1,4 +1,5 @@
 #include "Event.h"
+#include "stdafx.h"
 
 Event::Event(Wire * w, int t, int v, int c)
 {

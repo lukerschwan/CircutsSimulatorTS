@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include <string>
+#include "Wire.h"
 using namespace std;
 
 class Wire; //foreward declaration

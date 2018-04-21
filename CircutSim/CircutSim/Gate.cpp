@@ -1,4 +1,5 @@
 #include "Gate.h"
+#include "stdafx.h"
 
 Gate::Gate(Wire * in1New, Wire * in2New, Wire * outNew, int typeNew, int delayNew)
 {
