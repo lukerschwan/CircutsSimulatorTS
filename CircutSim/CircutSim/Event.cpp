@@ -49,7 +49,15 @@ int Event::getCreationCnt() const
 	return creationCnt;
 }
 
-bool Event::operator>(const Event & e1) const
+bool Event::operator==(const Event & e1) const
 {
-	return time > e1.time;
+	return time == e1.time;
+}
+
+bool Event::operator<(const Event & e1) const
+{
+	if(*this == e1){
+		return creationCnt < e1.getCreationCnt();
+	}
+	return time < e1.time;
 }

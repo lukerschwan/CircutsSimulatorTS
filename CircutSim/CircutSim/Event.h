@@ -13,7 +13,8 @@ public:
 	int getTime() const;
 	int getVal() const;
 	int getCreationCnt() const;
-	bool operator>(const Event& e1)const;
+	bool operator ==(const Event& e1)const;
+	bool operator<(const Event& e1)const;
 
 private:
 
