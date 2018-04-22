@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include<string>
 #include<vector>
+#include"Gate.h"
 using namespace std;
 class Gate; //foreward declaration
 class Wire {

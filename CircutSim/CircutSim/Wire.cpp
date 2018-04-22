@@ -7,9 +7,8 @@ Wire::Wire(string n, char v, int i, int h, Gate * d)
 {
 	name = n;
 	val = v;
-	index = i;
 	history = h;
-	drive.push_back(d);
+	index = i;
 }
 
 string Wire::getName() const
