@@ -36,7 +36,12 @@ vector<Gate*> Wire::getDrive(int gateIndex) const
 	return drive;
 }
 
+void Wire::setVal(char & v)
+{
+	val = v;
+}
+
 void Wire::setDrive(Gate * d)
 {
-	//drive.insert(d);
+	drive.push_back(d);
 }

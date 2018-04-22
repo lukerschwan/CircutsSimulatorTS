@@ -21,11 +21,11 @@ public:
 
 
 	//wire setters
-	void setVal(char v);
+	void setVal(char &v);
 	void setDrive(Gate* d);
 	
 private:
-	void setHistory(int h); //I think this should be private since it will only be accessed by member functions
+	//void setHistory(int h); //I think this should be private since it will only be accessed by member functions
 
 	string name;
 	char val;

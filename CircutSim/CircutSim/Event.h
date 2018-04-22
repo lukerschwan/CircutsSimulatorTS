@@ -6,12 +6,12 @@ class Event{
 public:
 	Event(Wire *w = nullptr, int t = 0, int v = 0, int c = 0);
 	void setEventWire(Wire *w);
-	void setTime(int t);
-	void setVal(int v);
-	void setCreationCnt(int c);
+	void setTime(int &t);
+	void setVal(char &v);
+	void setCreationCnt(int &c);
 	Wire *getEventWire(int index) const;
 	int getTime() const;
-	int getVal() const;
+	char getVal() const;
 	int getCreationCnt() const;
 	bool operator ==(const Event& e1)const;
 	bool operator<(const Event& e1)const; //Reversed because greater parameter does not work for the priority queue
@@ -21,6 +21,6 @@ private:
 
 	vector<Wire *> eventWire;
 	int time;
-	int val;
+	char val;
 	int creationCnt;
 };

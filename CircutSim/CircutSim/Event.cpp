@@ -14,17 +14,17 @@ void Event::setEventWire(Wire *w)
 	eventWire.push_back(w);
 }
 
-void Event::setTime(int t)
+void Event::setTime(int &t)
 {
 	time = t;
 }
 
-void Event::setVal(int v)
+void Event::setVal(char &v)
 {
 	val = v;
 }
 
-void Event::setCreationCnt(int c)
+void Event::setCreationCnt(int &c)
 {
 	creationCnt = c;
 }
@@ -39,7 +39,7 @@ int Event::getTime() const
 	return time;
 }
 
-int Event::getVal() const
+char Event::getVal() const
 {
 	return val;
 }
