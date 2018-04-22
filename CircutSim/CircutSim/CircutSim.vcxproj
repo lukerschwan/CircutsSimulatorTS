@@ -165,6 +165,14 @@
     </ClCompile>
     <ClCompile Include="Wire.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="circuit0.txt" />
+    <Text Include="circuit0_v.txt" />
+    <Text Include="circuit1.txt" />
+    <Text Include="circuit1_v.txt" />
+    <Text Include="circuit2.txt" />
+    <Text Include="circuit2_v.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
