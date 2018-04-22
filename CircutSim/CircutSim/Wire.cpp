@@ -3,6 +3,14 @@
 
 
 
+Wire::Wire(string n, char v, int i, int h, Gate * d)
+{
+	name = n;
+	val = v;
+	history = h;
+	index = i;
+}
+
 string Wire::getName() const
 {
 	return name;
