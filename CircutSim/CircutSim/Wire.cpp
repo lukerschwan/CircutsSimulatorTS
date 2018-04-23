@@ -3,7 +3,7 @@
 
 
 
-Wire::Wire(string n, char v, int i, int h, Gate * d)
+Wire::Wire(string n, char v, int i, string h, Gate * d)
 {
 	name = n;
 	val = v;
@@ -26,7 +26,7 @@ int Wire::getIndex() const
 	return index;
 }
 
-int Wire::getHistory() const
+string Wire::getHistory() const
 {
 	return history;
 }
@@ -39,6 +39,9 @@ vector<Gate*> Wire::getDrive(int gateIndex) const
 void Wire::setVal(char & v)
 {
 	val = v;
+	for (int i = 0; i < time) {
+
+	}
 }
 
 void Wire::setDrive(Gate * d)
