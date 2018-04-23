@@ -15,7 +15,7 @@ Delay
 	*/
 public:
 	//default constructor
-	Gate(Wire* in1  =nullptr, Wire* in2 = nullptr, Wire* out = nullptr, int type = 0, int delay = 0);
+	Gate(Wire* in1  =nullptr, Wire* in2 = nullptr, Wire* out = nullptr, string type = 0, int delay = 0);
 
 
 	//TODO write the get gate result function
