@@ -54,6 +54,7 @@ bool Event::operator==(const Event & e1) const
 	return time == e1.time;
 }
 
+
 bool operator<(const Event & e1, const Event & e2)
 {
 	if (e1 == e2) {
