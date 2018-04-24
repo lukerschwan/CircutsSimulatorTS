@@ -17,9 +17,7 @@ public:
 	//default constructor
 	Gate(Wire* in1New  =nullptr, Wire* in2New = nullptr, Wire* outNew = nullptr, string typeNew = "", int delayNew = 0);
 
-
-	//TODO write the get gate result function
-	// gateEvent getGateResult(Wire*in1, Wire *in2, , int type, int delay);
+	void gateResult();
 
 
 
