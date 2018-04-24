@@ -54,15 +54,11 @@ bool Event::operator==(const Event & e1) const
 	return time == e1.time;
 }
 
-bool Event::operator<(const Event & e1) const
-{
-	if(*this == e1){
-		return creationCnt > e1.getCreationCnt();
-	}
-	return time > e1.time;
-}
 
-bool Event::operator>(const Event & e1) const
+bool operator<(const Event & e1, const Event & e2)
 {
-	return !(*this < e1);
+	if (e1 == e2) {
+		return e1.getCreationCnt > e2.getCreationCnt();
+	}
+	return e1.time > e2.time;
 }

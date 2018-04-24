@@ -8,14 +8,14 @@ class Gate; //foreward declaration
 class Wire {
 public:
 	//wire default constructor
-	Wire(string n = "", char v = 'X', int i = 0, int h = 0, Gate * d = nullptr);
+	Wire(string n = "", char v = 'X', int i = 0, string h = 0, Gate * d = nullptr);
 
 
 	//wire getters 
 	string getName() const;
 	char getVal() const;
 	int getIndex() const;
-	int getHistory() const;
+	string getHistory() const;
 	vector<Gate*> getDrive(int gateIndex) const;
 
 
@@ -23,6 +23,7 @@ public:
 	//wire setters
 	void setVal(char &v);
 	void setDrive(Gate* d);
+	void setHistory(char &c);
 	
 private:
 	//void setHistory(int h); //I think this should be private since it will only be accessed by member functions
@@ -30,6 +31,6 @@ private:
 	string name;
 	char val;
 	int index;
-	int history;
+	string history;
 	vector<Gate*> drive;
 };
