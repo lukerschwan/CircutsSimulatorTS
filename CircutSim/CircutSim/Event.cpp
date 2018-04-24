@@ -64,10 +64,12 @@ bool Event::operator==(const Event & e1) const
 }
 
 
-bool operator<(const Event & e1, const Event & e2)
+bool  operator<(const Event & e1, const Event & e2)
 {
 	if (e1 == e2) {
-		return e1.getCreationCnt > e2.getCreationCnt();
+		return (e1.getCreationCnt() > e2.getCreationCnt());
 	}
-	return e1.time > e2.time;
+	return (e1.time > e2.time);
 }
+
+
