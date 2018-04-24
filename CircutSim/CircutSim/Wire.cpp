@@ -9,6 +9,9 @@ Wire::Wire(string n, char v, int i, string h, Gate * d)
 	val = v;
 	history = h;
 	index = i;
+	//max fanout will be 20 this is okay becuase normal circuits can only drive like 5
+	drive.resize(20);
+	drive.push_back(d);
 }
 
 string Wire::getName() const
