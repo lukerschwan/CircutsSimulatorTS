@@ -3,15 +3,24 @@
 
 Event::Event(Wire * w, int t, int v, int c)
 {
-	eventWire.push_back(w);
+	eventWire =w;
 	time = t;
 	val = v;
 	creationCnt = c;
 }
 
+Event::Event(Event & e1)
+{
+
+	eventWire = e1.eventWire;
+	time = e1.time;
+	val = e1.val;
+	creationCnt = e1.creationCnt;
+}
+
 void Event::setEventWire(Wire *w)
 {
-	eventWire.push_back(w);
+	eventWire = w;
 }
 
 void Event::setTime(int &t)
@@ -29,9 +38,9 @@ void Event::setCreationCnt(int &c)
 	creationCnt = c;
 }
 
-Wire * Event::getEventWire(int index) const
+Wire * Event::getEventWire() const
 {
-	return eventWire.at(index);
+	return eventWire;
 }
 
 int Event::getTime() const

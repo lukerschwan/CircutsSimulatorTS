@@ -31,12 +31,12 @@ string Wire::getHistory() const
 	return history;
 }
 
-vector<Gate*> Wire::getDrive(int gateIndex) const
+vector<Gate*> Wire::getDrive() const
 {
 	return drive;
 }
 
-void Wire::setVal(char & v)
+void Wire::setVal(const char & v)
 {
 	val = v;
 }
@@ -46,7 +46,7 @@ void Wire::setDrive(Gate * d)
 	drive.push_back(d);
 }
 
-void Wire::setHistory(char & c)
+void Wire::setHistory(const char & c)
 {
 	history.append(1, c);
 }
