@@ -16,14 +16,14 @@ public:
 	char getVal() const;
 	int getIndex() const;
 	string getHistory() const;
-	vector<Gate*> getDrive(int gateIndex) const;
+	vector<Gate*> getDrive() const;
 
 
 
 	//wire setters
-	void setVal(char &v);
+	void setVal(const char &v);
 	void setDrive(Gate* d);
-	void setHistory(char &c);
+	void setHistory(const char &c);
 	
 private:
 	//void setHistory(int h); //I think this should be private since it will only be accessed by member functions
