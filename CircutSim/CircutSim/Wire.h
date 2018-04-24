@@ -9,7 +9,7 @@ class Wire {
 public:
 	//wire default constructor
 	Wire(string n = "", char v = 'X', int i = 0, string h = 0, Gate * d = nullptr);
-
+	static int drivingNumber;
 
 	//wire getters 
 	string getName() const;
