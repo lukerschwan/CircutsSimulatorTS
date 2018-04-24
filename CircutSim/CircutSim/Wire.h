@@ -18,8 +18,6 @@ public:
 	string getHistory() const;
 	vector<Gate*> getDrive() const;
 
-
-
 	//wire setters
 	void setVal(const char &v);
 	void setDrive(Gate* d);
