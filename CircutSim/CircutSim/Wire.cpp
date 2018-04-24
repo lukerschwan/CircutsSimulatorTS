@@ -40,6 +40,7 @@ vector<Gate*> Wire::getDrive() const
 
 void Wire::setVal(const char & v)
 {
+	history = val;
 	val = v;
 }
 
@@ -48,7 +49,3 @@ void Wire::setDrive(Gate * d)
 	drive.push_back(d);
 }
 
-void Wire::setHistory(const char & c)
-{
-	history.append(1, c);
-}
