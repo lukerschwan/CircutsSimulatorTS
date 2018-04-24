@@ -5,7 +5,6 @@ class Event{
 	//added event class
 public:
 	Event(Wire *w = nullptr, int t = 0, int v = 0, int c = 0);
-	Event(Event& e1); //probably get rid of this... 
 	void setEventWire(Wire *w);
 	void setTime(int &t);
 	void setVal(char &v);
