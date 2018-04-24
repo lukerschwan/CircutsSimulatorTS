@@ -1,21 +1,12 @@
 #include "Event.h"
 #include "stdafx.h"
 
-Event::Event(Wire * w, int t, int v, int c)
+Event::Event(Wire * w, int t, char v, int c)
 {
 	eventWire =w;
 	time = t;
 	val = v;
 	creationCnt = c;
-}
-
-Event::Event(Event & e1)
-{
-
-	eventWire = e1.eventWire;
-	time = e1.time;
-	val = e1.val;
-	creationCnt = e1.creationCnt;
 }
 
 void Event::setEventWire(Wire *w)
