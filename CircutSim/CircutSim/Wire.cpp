@@ -49,3 +49,9 @@ void Wire::setDrive(Gate * d)
 	drive.push_back(d);
 }
 
+void Wire::correctDrive()
+{
+	drive.pop_back();
+	drive.pop_back();
+}
+

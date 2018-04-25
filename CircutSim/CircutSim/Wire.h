@@ -21,7 +21,7 @@ public:
 	//wire setters
 	void setVal(const char &v);
 	void setDrive(Gate* d);
-	
+	void correctDrive();
 private:
 	
 
