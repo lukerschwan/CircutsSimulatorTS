@@ -4,7 +4,7 @@ using namespace std;
 
 class WirePrint {
 public:
-	WirePrint(string n = "", string f = "");
+	WirePrint(string n = "", string f = "X");
 	void setWireName(string n);
 	void setWaveForm(string f);
 	string getWireName() const;
