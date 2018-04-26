@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="Event.h" />
     <ClInclude Include="Gate.h" />
+    <ClInclude Include="WirePrint.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Wire.h" />
@@ -168,6 +169,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Wire.cpp" />
+    <ClCompile Include="WirePrint.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="circuit0.txt" />
