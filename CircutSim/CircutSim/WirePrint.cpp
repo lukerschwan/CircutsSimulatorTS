@@ -1,4 +1,6 @@
 #include "WirePrint.h"
+#include "stdafx.h"
+using namespace std;
 
 WirePrint::WirePrint(string n, string f)
 {
