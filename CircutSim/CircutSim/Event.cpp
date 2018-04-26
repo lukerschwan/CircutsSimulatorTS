@@ -51,14 +51,19 @@ int Event::getCreationCnt() const
 
 bool Event::operator==(const Event & e1) const
 {
-	return time == e1.time;
+	if (val == e1.val && time == e1.time && eventWire == e1.eventWire) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 
 bool  operator<(const Event & e1, const Event & e2)
 {
-	if (e1 == e2) {
-		return (e1.getCreationCnt() > e2.getCreationCnt());
+	if (e1.time == e2.time) {
+		return (e1.creationCnt > e2.creationCnt);
 	}
 	return (e1.time > e2.time);
 }
