@@ -1,11 +1,11 @@
 #pragma once
 #include "stdafx.h"
 #include <string>
-#include "Wire.h"
+//#include "Wire.h"
 #include "Event.h"
 using namespace std;
 
-class Wire; //foreward declaration
+//class Wire; //foreward declaration
 class Gate {
 	/*
 In1 

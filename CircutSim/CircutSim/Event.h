@@ -1,7 +1,9 @@
 #pragma once
-#include "Wire.h"
 #include "stdafx.h"
+#include "Wire.h"
+
 using namespace std;
+class Wire; //forward declaration
 class Event{
 	//added event class
 public:

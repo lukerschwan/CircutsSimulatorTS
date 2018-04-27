@@ -1,6 +1,7 @@
 #include "Event.h"
 #include "stdafx.h"
 
+
 Event::Event(Wire * w, int t, char v, int c)
 {
 	eventWire =w;
