@@ -80,5 +80,32 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="circuit5.txt" />
+    <Text Include="circuit4.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit4_v.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit5_v.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit6.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit6_v.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit7.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit7_v.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit8.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="circuit8_v.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
