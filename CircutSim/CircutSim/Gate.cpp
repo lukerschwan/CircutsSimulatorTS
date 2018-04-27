@@ -1,5 +1,7 @@
 #include "Gate.h"
 #include "stdafx.h"
+#include "Event.h"
+#include<queue>
 
 Gate::Gate(Wire* in1New, Wire* in2New, Wire* outNew, string typeNew, int delayNew)
 {
@@ -10,9 +12,8 @@ Gate::Gate(Wire* in1New, Wire* in2New, Wire* outNew, string typeNew, int delayNe
 	delay = delayNew; 
 }
 
- void Gate::gateResult(priority_queue<Event> &q)
+ void Gate::gateResult(priority_queue<Event> &q, int &cc)
 {
-	static int cc = 100;
 	if (type == "AND") {
 		if (in1->getVal() == '0' || in2->getVal() == '0') {
 			q.emplace(outWire, q.top().getTime(), '0' , cc);
