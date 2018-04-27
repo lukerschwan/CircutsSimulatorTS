@@ -19,6 +19,7 @@ public:
 	Gate(Wire* in1New  =nullptr, Wire* in2New = nullptr, Wire* outNew = nullptr, string typeNew = "", int delayNew = 0);
 
 	void gateResult(priority_queue<Event> &q, int &cc);
+	Wire * getIn1() const;
 	Wire * getIn2() const;
 	Wire * getOutWire() const;
 	string	   getType() const;
