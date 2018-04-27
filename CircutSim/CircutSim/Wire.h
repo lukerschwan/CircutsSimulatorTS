@@ -8,7 +8,7 @@ class Gate; //foreward declaration
 class Wire {
 public:
 	//wire default constructor
-	Wire(string n = "", char v = 'X', int i = 0, string h = 0, Gate * d = nullptr);
+	Wire(string n = "", char v = 'X', int i = 0, string h = "", Gate * d = nullptr);
 	static int drivingNumber;
 
 	//wire getters 

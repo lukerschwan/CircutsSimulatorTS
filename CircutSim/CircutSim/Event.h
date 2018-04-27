@@ -1,6 +1,6 @@
 #pragma once
-#include "Wire.h"
 #include "stdafx.h"
+#include "Wire.h"
 using namespace std;
 class Event{
 	//added event class
@@ -17,7 +17,6 @@ public:
 	int getCreationCnt() const;
 	bool operator ==(const Event& e1)const;
 	friend bool operator<(const Event& e1, const Event& e2); //Reversed because greater parameter does not work for the priority queue
-	//Event& operator=(const Event& e1);
 
 private:
 
