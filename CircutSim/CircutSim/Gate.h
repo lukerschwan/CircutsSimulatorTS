@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include <string>
 #include "Wire.h"
+#include "Event.h"
 using namespace std;
 
 class Wire; //foreward declaration
@@ -17,7 +18,7 @@ public:
 	//default constructor
 	Gate(Wire* in1New  =nullptr, Wire* in2New = nullptr, Wire* outNew = nullptr, string typeNew = "", int delayNew = 0);
 
-	void gateResult();
+	void gateResult(priority_queue<Event> &q);
 
 
 

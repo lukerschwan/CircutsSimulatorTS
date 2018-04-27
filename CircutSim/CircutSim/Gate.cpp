@@ -10,85 +10,88 @@ Gate::Gate(Wire* in1New, Wire* in2New, Wire* outNew, string typeNew, int delayNe
 	delay = delayNew; 
 }
 
-void Gate::gateResult()
+ void Gate::gateResult(priority_queue<Event> &q)
 {
+	static int cc = 100;
 	if (type == "AND") {
 		if (in1->getVal() == '0' || in2->getVal() == '0') {
-			outWire->setVal('0');
+			q.emplace(outWire, q.top().getTime(), '0' , cc);
 		}
 		else if (in1->getVal() == '1' && in2->getVal() == '1') {
-			outWire->setVal('1');
+			q.emplace(outWire, q.top().getTime(), '1', cc);
 		}
 		else {
-			outWire->setVal('X');
+			q.emplace(outWire, q.top().getTime(), 'X', cc);
 		}
 	}
 	if (type == "NAND") {
 		if (in1->getVal() == '0' || in2->getVal() == '0') {
-			outWire->setVal('1');
+			q.emplace(outWire, q.top().getTime(), '1', cc);
 		}
 		else if (in1->getVal() == '1' && in2->getVal() == '1') {
-			outWire->setVal('0');
+			q.emplace(outWire, q.top().getTime(), '0', cc);
 		}
 		else {
-			outWire->setVal('X');
+			q.emplace(outWire, q.top().getTime(), 'X', cc);
 		}
 	}
 	if (type == "OR") {
 		if (in1->getVal() == '0' && in2->getVal() == '0') {
-			outWire->setVal('0');
+			q.emplace(outWire, q.top().getTime(), '0', cc);
 		}
 		else if (in1->getVal() == '1' || in2->getVal() == '1') {
-			outWire->setVal('1');
+			q.emplace(outWire, q.top().getTime(), '1', cc);
 		}
 		else {
-			outWire->setVal('X');
+			q.emplace(outWire, q.top().getTime(), 'X', cc);
 		}
 	}
 	if (type == "NOR") {
 		if (in1->getVal() == '0' && in2->getVal() == '0') {
-			outWire->setVal('1');
+			q.emplace(outWire, q.top().getTime(), '1', cc);
 		}
 		else if (in1->getVal() == '1' || in2->getVal() == '1') {
-			outWire->setVal('0');
+			q.emplace(outWire, q.top().getTime(), '0', cc);
 		}
 		else {
 			outWire->setVal('X');
+			q.emplace(outWire, q.top().getTime(), 'X', cc);
 		}
 	}
 	if (type == "XOR") {
 		if (in1->getVal() ==  in2->getVal() && in1->getVal() != 'X') {
-			outWire->setVal('0');
+			q.emplace(outWire, q.top().getTime(), '0', cc);
 		}
 		else if (in1->getVal() != in2->getVal() && in1->getVal() != 'X') {
-			outWire->setVal('1');
+			q.emplace(outWire, q.top().getTime(), '1', cc);
 		}
 		else {
-			outWire->setVal('X');
+			q.emplace(outWire, q.top().getTime(), 'X', cc);
 		}
 	}
 	if (type == "XNOR") {
 		if (in1->getVal() == in2->getVal() && in1->getVal() != 'X') {
-			outWire->setVal('1');
+			q.emplace(outWire, q.top().getTime(), '1', cc);
 		}
 		else if (in1->getVal() != in2->getVal() && in1->getVal() != 'X') {
-			outWire->setVal('0');
+			q.emplace(outWire, q.top().getTime(), '0', cc);
 		}
 		else {
-			outWire->setVal('X');
+			q.emplace(outWire, q.top().getTime(), 'X', cc);
 		}
 	}
 	if (type == "NOT") {
 		if (in1->getVal() == '0') {
-			outWire->setVal('1');
+			q.emplace(outWire, q.top().getTime(), '1', cc);
 		}
 		else if (in1->getVal() == '1') {
-			outWire->setVal('0');
+			q.emplace(outWire, q.top().getTime(), '0', cc);
 		}
 		else {
-			outWire->setVal('X');
+			q.emplace(outWire, q.top().getTime(), 'X', cc);
 		}
 	}
+	cc++;
 }
 
 Wire * Gate::getIn1() const
