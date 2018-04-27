@@ -15,6 +15,11 @@ void WirePrint::setWireName(string n)
 
 void WirePrint::setWaveForm(char f)
 {
+	waveForm.back() = f;
+}
+
+void WirePrint::pushWaveForm(char f)
+{
 	waveForm.push_back(f);
 }
 
