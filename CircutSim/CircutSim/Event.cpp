@@ -59,13 +59,10 @@ bool Event::operator==(const Event & e1) const
 	}
 }
 
-
-bool  operator<(const Event & e1, const Event & e2)
+bool operator<(const Event & e1, const Event & e2)
 {
 	if (e1.time == e2.time) {
 		return (e1.creationCnt > e2.creationCnt);
 	}
-	return (e1.time > e2.time);
+	return e1.time > e2.time; //return the opposite because greater in priority queue doesnt work
 }
-
-

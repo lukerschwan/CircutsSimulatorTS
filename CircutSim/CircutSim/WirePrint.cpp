@@ -13,9 +13,9 @@ void WirePrint::setWireName(string n)
 	wireName = n;
 }
 
-void WirePrint::setWaveForm(string f)
+void WirePrint::setWaveForm(char f)
 {
-	waveForm = f;
+	waveForm.push_back(f);
 }
 
 string WirePrint::getWireName() const
