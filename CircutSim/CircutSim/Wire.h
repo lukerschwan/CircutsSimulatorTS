@@ -9,7 +9,7 @@ class Gate; //foreward declaration
 class Wire {
 public:
 	//wire default constructor
-	Wire(string n = "", char v = 'X', int i = 0, string h = "", Gate * d = nullptr);
+	Wire(string n = "", char v = 'X', int i = 0, string h = "", Gate * d = nullptr, string type="INPUT");
 	static int drivingNumber;
 
 	//wire getters 
@@ -18,6 +18,7 @@ public:
 	int getIndex() const;
 	string getHistory() const;
 	vector<Gate*> getDrive() const;
+	bool isOutput() const;
 
 	//wire setters
 	void setVal(const char &v);
@@ -31,4 +32,5 @@ private:
 	int index;
 	string history;
 	vector<Gate*> drive;
+	bool isOutputBool;
 };

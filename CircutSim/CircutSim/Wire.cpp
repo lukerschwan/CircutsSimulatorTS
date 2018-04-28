@@ -3,7 +3,7 @@
 
 
 
-Wire::Wire(string n, char v, int i, string h, Gate * d)
+Wire::Wire(string n, char v, int i, string h, Gate * d, string type )
 {
 	name = n;
 	val = v;
@@ -11,6 +11,12 @@ Wire::Wire(string n, char v, int i, string h, Gate * d)
 	index = i;
 	//max fanout will be 20 this is okay becuase normal circuits can only drive like 5
 	drive.push_back(d);
+	if (type == "INPUT"){
+		isOutputBool = false;
+}
+else {
+	isOutputBool = true;
+}
 }
 
 string Wire::getName() const
@@ -36,6 +42,11 @@ string Wire::getHistory() const
 vector<Gate*> Wire::getDrive() const
 {
 	return drive;
+}
+
+bool Wire::isOutput() const
+{
+	return isOutputBool;
 }
 
 void Wire::setVal(const char & v)
